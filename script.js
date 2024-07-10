@@ -20,6 +20,16 @@ function goBack() {
 }
 let cookie = document.querySelector(".closedCookie img")
 cookie.addEventListener('click', showLuck)
+document.addEventListener('keydown', function(e) {
+    if (e.key == 'Enter' && document.querySelector(".openedCookie").classList.contains("hide")) {
+        showLuck()
+    }
+})
 
 let button = document.querySelector("button")
 button.addEventListener('click', goBack)
+document.addEventListener('keydown', function(d) {
+    if (d.key == 'Backspace' && document.querySelector(".closedCookie").classList.contains("hide")) {
+        goBack()
+    }
+})
